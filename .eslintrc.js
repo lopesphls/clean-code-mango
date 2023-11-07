@@ -10,15 +10,19 @@ module.exports = {
 		tsconfigRootDir: __dirname,
 		sourceType: 'module',
 	},
-	plugins: ['@typescript-eslint/eslint-plugin'],
+	plugins: ['@typescript-eslint/eslint-plugin', 'jest'],
 	extends: [
 		'airbnb-typescript/base',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:prettier/recommended',
+		'plugin:jest/recommended',
 	],
 	ignorePatterns: ['.eslintrc.js', 'tsconfig.json'],
 	rules: {
 		'import/extensions': 'off',
 		'import/no-extraneous-dependencies': 'off',
+		'jest/valid-title': 'off',
+		'@typescript-eslint/no-unused-vars': 'off',
+		'@typescript-eslint/no-explicit-any': 'off',
 	},
 };
